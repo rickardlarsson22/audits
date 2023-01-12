@@ -1,12 +1,12 @@
 # Biconomy
 ## QA report
 ### USE A MORE RECENT VERSION OF SOLIDITY
-Use a solidity version of at least 0.8.2 to get simple compiler automatic inclining.
-Use a solidity version of at least 0.8.3 to get better struct packing and cheaper multiple storage reads.
-Use a solidity version of at least 0.8.4 to get custom errors, which are cheaper than revert() / require().
-Use a solidity version of at least 0.8.10 to have external calls skip contract existence checks if the call has a return value.
-Use a solidity version of at least 0.8.12 to get string.concat() to be used instead of abi.encodePacked(<str>,<str>)
-Use at least 0.8.13 to adopt using for with a list of free functions. 
+Use a solidity version of at least 0.8.2 to get simple compiler automatic inclining.  
+Use a solidity version of at least 0.8.3 to get better struct packing and cheaper multiple storage reads.  
+Use a solidity version of at least 0.8.4 to get custom errors, which are cheaper than revert() / require().  
+Use a solidity version of at least 0.8.10 to have external calls skip contract existence checks if the call has a return value.  
+Use a solidity version of at least 0.8.12 to get string.concat() to be used instead of abi.encodePacked(<str>,<str>)  
+Use a solidity version of at least 0.8.13 to adopt using for with a list of free functions. 
 
 - BaseSmartAccount.sol
 - Proxy.sol
@@ -36,7 +36,7 @@ There are 23 instances of this issue:
 pragma solidity 0.8.12;
 ```
 ### USE CUSTOM IMPORTS INSTEAD OF THE PLAIN “IMPORT” “FILE.SOL”
-There are 38 instances of this issue:
+There are 38 instances of this issue:  
 BaseSmartAccount.sol
 ```
 10	-	import "./common/Enum.sol";
