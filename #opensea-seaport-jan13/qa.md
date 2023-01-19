@@ -1,6 +1,6 @@
 # OpenSea Seaport 1.2
 # QA report
-# Informational Findings ()
+# Informational Findings (4)
 ## [INFO-01] Unlocked solidity pragmas
 ### Context
 Present in most files.  
