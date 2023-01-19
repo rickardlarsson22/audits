@@ -26,3 +26,15 @@ Lock the compiler version on the affected contracts.
 Some functions are missing @notive/@dev NatSpec comments for the function, @param for all/some of their parameters and @return for return values. Given that NatSpe is an important part of code documentation, this affects code comprehension, auditability and usability.
 ### Recommendation
 Consider adding in full NatSpec comments to all funtions and contracts to have complete code documentation for future use.
+## [INFO-04] Event is missing indexed fields
+### Context
+[ConduitControllerInterface.sol#L29](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/interfaces/ConduitControllerInterface.sol#L29),  
+[ConsiderationEventsAndErrors.sol#L61](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/interfaces/ConsiderationEventsAndErrors.sol#L61), [ConsiderationEventsAndErrors.sol#L69](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/interfaces/ConsiderationEventsAndErrors.sol#L69)
+### Description
+Index `event` fields make the field more quickly accessible to off-chain tools that parse events. However, note that each index costs extra gas during emission, so it's not necessarily best to index the maximum allowed per event (three fields).
+### Recommendation
+Add index on the event.
+
+```
+event NewConduit(address conduit, bytes32 conduitKey);
+```
