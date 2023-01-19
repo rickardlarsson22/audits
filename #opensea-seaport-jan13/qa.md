@@ -32,7 +32,7 @@ Consider adding in full NatSpec comments to all funtions and contracts to have c
 ### Description
 Index `event` fields make the field more quickly accessible to off-chain tools that parse events. However, note that each index costs extra gas during emission, so it's not necessarily best to index the maximum allowed per event (three fields).
 ### Recommendation
-Add index on the event.
+Add index on the event.  
 `contracts/interfaces/ConduitControllerInterface.sol`
 ```
 -   event NewConduit(address conduit, bytes32 conduitKey);
