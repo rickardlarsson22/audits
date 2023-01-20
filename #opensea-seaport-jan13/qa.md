@@ -48,8 +48,42 @@ Add index on the event.
 ```
 ## [INFO-05] Use delete
 ### Context
-[OrderCombiner.sol#L239](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L239), [OrderCombiner.sol#L258](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L258), [OrderCombiner.sol#L564](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L564), [OrderCombiner.sol#L996](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L996), [ReferenceAmountDeriver.sol#L44](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceAmountDeriver.sol#L44), [ReferenceFulfillmentApplier.sol#L192](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceFulfillmentApplier.sol#L192), [ReferenceOrderCombiner.sol#L230](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L230), [ReferenceOrderCombiner.sol#L233](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L233), [ReferenceOrderCombiner.sol#L249](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L249), [ReferenceOrderCombiner.sol#L252](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L252), [ReferenceOrderCombiner.sol#L494](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L494)
+[OrderCombiner.sol#L239](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L239), [OrderCombiner.sol#L258](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L258), [ReferenceOrderCombiner.sol#L230](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L230), [ReferenceOrderCombiner.sol#L233](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L233), [ReferenceOrderCombiner.sol#L249](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L249), [ReferenceOrderCombiner.sol#L252](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L252)
 ### Description
 The specified contract's functions clear values by setting them to `= 0`.
 ### Recommendation
-Consider changing the code by using `delete`
+Consider changing the code by using `delete`.  
+  
+OrderCombiner.sol
+```
+-    advancedOrder.numerator = 0;
++    delete advancedOrder.numerator;
+```
+ReferenceOrderCombiner.sol
+```
+    if (maximumFulfilled == 0) {
+                    // Mark fill fraction as zero as the order will not be used.
+-                    advancedOrder.numerator = 0;
++                    delete advancedOrder.numerator;
+
+                    // Mark fill fraction as zero as the order will not be used.
+-                    orderToExecute.numerator = 0;
++                    delete orderToExecute.numerator;
+
+                    // Continue iterating through the remaining orders.
+                    continue;
+                }
+
+    if (numerator == 0) {
+                    // Mark fill fraction as zero if the order is not fulfilled.
+-                    advancedOrder.numerator = 0;
++                    delete advancedOrder.numerator;
+
+                    // Mark fill fraction as zero as the order will not be used.
+-                    orderToExecute.numerator = 0;
++                    delete orderToExecute.numerator;
+
+                    // Continue iterating through the remaining orders.
+                    continue;
+                }
+```            
