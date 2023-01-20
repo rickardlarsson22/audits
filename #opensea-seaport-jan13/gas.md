@@ -29,6 +29,7 @@ function _getGeneratedOrder(
 The initialization of `i = 0` can be skipped, as 0 is the default value.
 ### Recommendation
 Skip initialization to 0.  
+  
 Conduit.sol
 ```
 -       for (uint256 i = 0; i < totalStandardTransfers; ) {
