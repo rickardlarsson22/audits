@@ -6,7 +6,7 @@
 Present in most files.  
 ### Description
 Most of the implementation code uses a solidity pragma of ^0.8.17. Unlocked solidity pragmas can result in unexpected behaviours or errors with different compiler versions.
-```
+```solidity
 pragma solidity ^0.8.17;
 ```
 ### Recommendation
@@ -15,7 +15,7 @@ Lock the compiler version on the affected contracts.
 ### Context
 [AmountDeriver.sol#L8](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/AmountDeriver.sol#L8), [Assertions.sol#L6](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Assertions.sol#L6), [BasicOrderFulfiller.sol#L23](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/BasicOrderFulfiller.sol#L23), [Consideration.sol#L23](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Consideration.sol#L23), [Consideration.sol#L25](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Consideration.sol#L25), [ConsiderationBase.sol#L12](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationBase.sol#L12), [ConsiderationDecoder.sol#L20](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationDecoder.sol#L20), [ConsiderationDecoder.sol#L22](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationDecoder.sol#L22), [ConsiderationEncoder.sol#L4](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationEncoder.sol#L4), [ConsiderationEncoder.sol#L20](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationEncoder.sol#L20), [ConsiderationErrors.sol#L6](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ConsiderationErrors.sol#L6), [CounterManager.sol#L10](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/CounterManager.sol#L10), [CriteriaResolution.sol#L15](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/CriteriaResolution.sol#L15), [CriteriaResolution.sol#L17](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/CriteriaResolution.sol#L17), [Executor.sol#L16](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Executor.sol#L16), [Executor.sol#L18](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Executor.sol#L18), [FulfillmentApplier.sol#L16](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/FulfillmentApplier.sol#L16), [GettersAndDerivers.sol#L8](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/GettersAndDerivers.sol#L8), [LowLevelHelpers.sol#L4](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/LowLevelHelpers.sol#L4), [OrderCombiner.sol#L23](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderCombiner.sol#L23), [OrderFulfiller.sol#L23](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderFulfiller.sol#L23), [OrderValidator.sol#L19](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderValidator.sol#L19), [ReentrancyGuard.sol#L8](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ReentrancyGuard.sol#L8), [SignatureVerification.sol#L12](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/SignatureVerification.sol#L12), [TokenTransferrer.sol#L4](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/TokenTransferrer.sol#L4), [Verifiers.sol#L10](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/Verifiers.sol#L10), [ZoneInteraction.sol#L16](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/ZoneInteraction.sol#L16), [ReferenceAssertions.sol#L14](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceAssertions.sol#L14), [ReferenceBasicOrderFulfiller.sol#L28](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceBasicOrderFulfiller.sol#L28), [ReferenceExecutor.sol#L29](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceExecutor.sol#L29), [ReferenceFulfillmentApplier.sol#L22](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceFulfillmentApplier.sol#L22), [ReferenceGettersAndDerivers.sol#L12](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceGettersAndDerivers.sol#L12), [ReferenceOrderCombiner.sol#L34](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderCombiner.sol#L34), [ReferenceOrderFulfiller.sol#L34](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceOrderFulfiller.sol#L34), [ReferenceReentrancyGuard.sol#L8](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceReentrancyGuard.sol#L8), [ReferenceSignatureVerification.sol#L12](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceSignatureVerification.sol#L12), [ReferenceTokenTransferrer.sol#L4](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceTokenTransferrer.sol#L4), [ReferenceZoneInteraction.sol#L29](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/reference/lib/ReferenceZoneInteraction.sol#L29)
 ### Recommendation
-```
+```solidity
 -   import "./../Contract.sol";
 +   import {Contract} from "./../Contract.sol";
 ```
@@ -34,12 +34,12 @@ Index `event` fields make the field more quickly accessible to off-chain tools t
 ### Recommendation
 Add index on the event.  
 contracts/interfaces/ConduitControllerInterface.sol
-```
+```solidity
 -   event NewConduit(address conduit, bytes32 conduitKey);
 +   event NewConduit(address indexed conduit, bytes32 conduitKey);
 ```
 contracts/interfaces/ConsiderationEventsAndErrors.sol
-```
+```solidity
 -   event OrderValidated(bytes32 orderHash, OrderParameters orderParameters);
 +   event OrderValidated(bytes32 indexed orderHash, OrderParameters orderParameters);
 
@@ -55,12 +55,12 @@ The specified contract's functions clear values by setting them to `= 0`.
 Consider changing the code by using `delete`.  
   
 OrderCombiner.sol
-```
+```solidity
 -    advancedOrder.numerator = 0;
 +    delete advancedOrder.numerator;
 ```
 ReferenceOrderCombiner.sol
-```
+```solidity
     if (maximumFulfilled == 0) {
                     // Mark fill fraction as zero as the order will not be used.
 -                    advancedOrder.numerator = 0;
