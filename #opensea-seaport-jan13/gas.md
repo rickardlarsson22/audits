@@ -1,5 +1,5 @@
 # OpenSea Seaport 1.2
-# Gas optimizations report (2)
+# Gas optimization report (2)
 ## [G-01] Unchecked{++i} is more efficient than i++
 ### Context
 [OrderValidator.sol#L508](https://github.com/ProjectOpenSea/seaport/blob/5de7302bc773d9821ba4759e47fc981680911ea0/contracts/lib/OrderValidator.sol#L508)
@@ -7,7 +7,7 @@
 The function `_getGeneratedOrder` uses `_contractNonces[offerer]++` which costs more gas than `++_contractNonces[offerer]`
 ### Recommendation
 Use `++_contractNonces[offerer]` to increment the value of an uint variable
-```
+```solidity
 function _getGeneratedOrder(
     ...
     uint256 contractNonce;
@@ -31,12 +31,12 @@ The initialization of `i = 0` can be skipped, as 0 is the default value.
 Skip initialization to 0.  
   
 Conduit.sol
-```
+```solidity
 -       for (uint256 i = 0; i < totalStandardTransfers; ) {
 +       for (uint256 i; i < totalStandardTransfers; ) {
 ```
 BasicOrderFulfiller.sol
-```
+```solidity
 -        for (
                         uint256 i = 0; // @audit : gas - Removing initialization of loop counter if the value is 0 by default.
                         i < totalAdditionalRecipientsDataSize;
@@ -53,12 +53,12 @@ BasicOrderFulfiller.sol
 +        for (uint256 i; i < totalAdditionalRecipientsDataSize; ) { 
 ```
 ConsiderationDecoder.sol
-```
+```solidity
 -        for (uint256 offset = 0; offset < tailOffset; offset += OneWord) {
 +        for (uint256 offset; offset < tailOffset; offset += OneWord) {
 ```
 CriteriaResolution.sol
-```
+```solidity
 -        for (uint256 i = 0; i < totalCriteriaResolvers; ++i) {
 +        for (uint256 i; i < totalCriteriaResolvers; ++i) {
 
@@ -69,7 +69,7 @@ CriteriaResolution.sol
 +        for (uint256 j; j < totalItems; ++j) { 
 ```
 OrderCombiner.sol
-```
+```solidity
 -        for (uint256 j = 0; j < totalOfferItems; ++j) {
 +        for (uint256 j; j < totalOfferItems; ++j) {
 
@@ -92,7 +92,7 @@ OrderCombiner.sol
 +        for (uint256 i; i < totalFulfillments; ++i) {
 ```
 OrderFulfiller.sol
-```
+```solidity
 -        for (uint256 i = 0; i < totalOfferItems; ++i) {
 +        for (uint256 i; i < totalOfferItems; ++i) {
 
@@ -100,7 +100,7 @@ OrderFulfiller.sol
 +        for (uint256 i; i < totalConsiderationItems; ++i) {
 ```
 OrderValidator.sol
-```
+```solidity
 -        for (uint256 i = 0; i < originalOfferLength; ) {
 +        for (uint256 i; i < originalOfferLength; ) {
 
@@ -114,7 +114,7 @@ OrderValidator.sol
 +        for (uint256 i; i < totalOrders; ++i) {
 ```
 TypeHashDirectory.sol
-```
+```solidity
 -        for (uint256 i = 0; i < MaxTreeHeight; ) {
 +        for (uint256 i; i < MaxTreeHeight; ) {
 ```
