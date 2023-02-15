@@ -27,13 +27,13 @@ The following number of issues were found, categorized by their severity:
 # Findings Summary
 
 | ID     | Title                                                                                                                | Severity      |
-| ------ | -------------------------------------------------------------------------------------------------------------------- | ------------- |
+| -------| -------------------------------------------------------------------------------------------------------------------- | ------------- |
 | [L-01] | Upon module's upgrade, the token approval sould be revoked                                                           | Low           |
 | [L-02] | Usage of deprecated `safeApprove()`                                                                                  | Low           |
 | [I-01] | Use of floating `pragma` version                                                                                     | Informational |
 | [I-02] | Missing natspec comments for contract's constructor, variables or functions                                          | Informational |
 | [I-03] | Use `bytes.concat` instead of `abi.encodePacked` for concatenation                                                   | Informational |
-| [N-02] | Insufficient coverage                                                                                                | Non-Critical  |
+| [N-01] | Insufficient coverage                                                                                                | Non-Critical  |
 | [N-02] | Functions, parameters and variables in snake case                                                                    | Non-Critical  |
 | [N-03] | Use scientific notation (e.g. 1E18) rather than exponentation (e.g. 10**18)                                          | Non-Critical  |
 | [N-04] | `Pragma` version ^0.8.15 is too recent to be trusted                                                                 | Non-Critical  |         
