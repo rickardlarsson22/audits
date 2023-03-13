@@ -1,4 +1,4 @@
-# rickardlarsson22's security audits, reviews, contributions
+# Rickard's security audits, reviews, contributions
 Some of my personal security audits, reviews and contributions will be shared here:
 ## code4rena
 - 
