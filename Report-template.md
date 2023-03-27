@@ -10,7 +10,7 @@
 
 # Detailed Findings
 
-# [S-01] {name}
+# [S-01]
 ## Lines of code
 
 ## Vulnerability details
