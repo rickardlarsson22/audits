@@ -11,19 +11,15 @@
 # Detailed Findings
 
 # [S-01] {name}
-
-
 ## Lines of code
 
-
 ## Vulnerability details
-
 ### Impact
 
 ### Proof of concept
+````solidity
 
-
+````
 ## Tools Used
-
 
 ## Recommended mitigation steps
