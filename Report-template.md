@@ -8,8 +8,7 @@
 | [L-01] | Any Low Title Here           | Low           |
 | [I-01] | Any Informational Title Here | Informational |
 
-# Detailed Findings
-
+# Detailed Findings (code4rena)
 # [S-01]
 ## Lines of code
 
@@ -23,3 +22,14 @@
 ## Tools Used
 
 ## Recommended mitigation steps
+
+
+# Detailed Findings (spearbitDao)
+# [S-01]
+## Severity
+
+## Context
+
+## Description
+
+## Recommendation
