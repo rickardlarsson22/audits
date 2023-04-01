@@ -25,11 +25,14 @@
 
 
 # Detailed Findings (spearbitDao)
-# [S-01]
-## Severity
+## [S-01]
+### Context
 
-## Context
+### Description
+````solidity
 
-## Description
+````
+### Recommendation
+````solidity
 
-## Recommendation
+````
