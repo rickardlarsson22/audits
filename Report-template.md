@@ -1,4 +1,4 @@
-# Findings Summary
+a# Findings Summary
 
 | ID     | Title                        | Severity      |
 | ------ | ---------------------------- | ------------- |
