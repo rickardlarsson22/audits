@@ -8,6 +8,19 @@ a# Findings Summary
 | [L-01] | Any Low Title Here           | Low           |
 | [I-01] | Any Informational Title Here | Informational |
 
+(CodeHawks)
+# Title
+## Summary
+
+## Vulnerability Details
+
+## Impact
+
+## Tools Used
+
+## Recommendations
+
+
 # Detailed Findings (code4rena)
 # [S-01]
 ## Lines of code
