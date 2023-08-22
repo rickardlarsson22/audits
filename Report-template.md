@@ -9,13 +9,16 @@ a# Findings Summary
 | [I-01] | Any Informational Title Here | Informational |
 
 (CodeHawks)
-# Title
+## Title
+
+## Severity
+
+## Relevant GitHub Links
+
 ## Summary
 
 ## Vulnerability Details
-````solidity
 
-````
 ## Impact
 
 ## Tools Used
