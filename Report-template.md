@@ -27,19 +27,18 @@ a# Findings Summary
 
 
 # Detailed Findings (code4rena)
-# [S-01]
+# Title
 ## Lines of code
 
-## Vulnerability details
-### Impact
+## Impact
 
-### Proof of concept
+## Proof of Concept
 ````solidity
 
 ````
 ## Tools Used
 
-## Recommended mitigation steps
+## Recommended Mitigation Steps
 
 
 # Detailed Findings (spearbitDao)
