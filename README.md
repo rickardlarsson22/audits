@@ -9,5 +9,7 @@ Some of my personal security audits, reviews and contributions will be shared he
 - [Ajina](https://github.com/rickardlarsson22/audits/blob/main/Ajina-security-review.md) - A non-custodial, peer-to-peer, permissionless lending, borrowing and trading system that requires no governance or external price feeds to function.
 - [Asymmetry](https://github.com/rickardlarsson22/audits/blob/main/Asymmetry-security-review.md) - Decentralizing Ethereum with safETH.
 - [Juicebox](https://github.com/rickardlarsson22/audits/blob/main/Juicebox-security-review.md) - A programmable treasury. Projects can use it to configure how their tokens should be minted when it receives funds, and under what conditions those funds can be distributed to preprogrammed addresses or reclaimed by its community.
+## CodeHawks
+- [BeedleFi](https://github.com/rickardlarsson22/audits/blob/main/BeedleFi-security-review.md).
 
 Reach me on Twitter [@rickardlarsson6](https://twitter.com/rickardlarsson6) for solo audits or consultation.  
