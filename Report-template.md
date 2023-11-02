@@ -42,14 +42,14 @@ a# Findings Summary
 
 
 # Detailed Findings (spearbitDao)
-## [S-01]
-### Context
+# [S-01]
+## Context
 
-### Description
+## Description
 ````solidity
 
 ````
-### Recommendation
+## Recommendation
 ````solidity
 
 ````
