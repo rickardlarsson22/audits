@@ -10,9 +10,6 @@ a# Findings Summary
 
 (CodeHawks)
 ## Title
-
-## Severity
-
 ## Relevant GitHub Links
 
 ## Summary
