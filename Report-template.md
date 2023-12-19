@@ -15,9 +15,9 @@ a# Findings Summary
 ## Summary
 
 ## Vulnerability Details
-````solidity
+```solidity
 
-````
+```
 ## Impact
 
 ## Tools Used
